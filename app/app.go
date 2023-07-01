@@ -39,6 +39,7 @@ func Generate() *cli.App {
 // Search for IPs to a given host
 func searchIPs(c *cli.Context) {
 	host := c.String("host")
+	fmt.Println("Searching for IPs of the host:", host)
 
 	ips, err := net.LookupIP(host)
 	if err != nil {
@@ -53,6 +54,7 @@ func searchIPs(c *cli.Context) {
 // Search for servers to a given host
 func searchServers(c *cli.Context) {
 	host := c.String("host")
+	fmt.Println("Searching for servers of the host:", host)
 
 	servers, err := net.LookupNS(host)
 	if err != nil {
