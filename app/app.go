@@ -12,7 +12,7 @@ import (
 func Generate() *cli.App {
 	app := cli.NewApp()
 	app.Name = "WebGetterCLI"
-	app.Usage = "Search for IP addresses and servers"
+	app.Usage = "Search for IP addresses and servers on web"
 	flags := []cli.Flag{
 		cli.StringFlag{
 			Name: "host",
@@ -23,20 +23,20 @@ func Generate() *cli.App {
 			Name:   "ip",
 			Usage:  "Search for IP addresses on web",
 			Flags:  flags,
-			Action: searchIP,
+			Action: searchIPs,
 		},
 		{
 			Name:   "server",
 			Usage:  "Search for servers on web",
 			Flags:  flags,
-			Action: searchServer,
+			Action: searchServers,
 		},
 	}
 
 	return app
 }
 
-func searchIP(c *cli.Context) {
+func searchIPs(c *cli.Context) {
 	host := c.String("host")
 
 	ips, err := net.LookupIP(host)
@@ -49,7 +49,7 @@ func searchIP(c *cli.Context) {
 	}
 }
 
-func searchServer(c *cli.Context) {
+func searchServers(c *cli.Context) {
 	host := c.String("host")
 
 	servers, err := net.LookupNS(host)
