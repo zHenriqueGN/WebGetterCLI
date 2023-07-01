@@ -36,6 +36,7 @@ func Generate() *cli.App {
 	return app
 }
 
+// Search for IPs to a given host
 func searchIPs(c *cli.Context) {
 	host := c.String("host")
 
@@ -49,6 +50,7 @@ func searchIPs(c *cli.Context) {
 	}
 }
 
+// Search for servers to a given host
 func searchServers(c *cli.Context) {
 	host := c.String("host")
 
