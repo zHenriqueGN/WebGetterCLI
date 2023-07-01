@@ -41,5 +41,4 @@ func searchIP(c *cli.Context) {
 	for _, ip := range ips {
 		fmt.Println(ip)
 	}
-
 }
