@@ -2,7 +2,7 @@
 A simple CLI to get IP addresses and servers from sites
 
 
-- Preparing the program
+- Running the program
   - "go build -o .out"
   - Searching for ips:
     - "./.out ip --host [HOST]"
