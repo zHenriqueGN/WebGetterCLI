@@ -3,8 +3,8 @@ A simple CLI to get IP addresses and servers from sites
 
 
 - Running the program
-  - "go build -o .out"
+  - "go build -o WG.so"
   - Searching for ips:
-    - "./.out ip --host [HOST]"
+    - "./WG.so ip --host [HOST]"
   - Searching for servers:
-    - "./.out servers --host [HOST]"
+    - "./WG.so servers --host [HOST]"
